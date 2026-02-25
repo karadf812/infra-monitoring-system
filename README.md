@@ -1,10 +1,4 @@
-# Infrastructure Monitoring System
-
-A lightweight infrastructure observability tool designed to simulate enterprise system monitoring used in large-scale environments such as financial institutions.
-
-## Overview
-
-This project continuously monitors critical system metrics:
+stem metrics:
 
 - CPU usage
 - Memory consumption
@@ -18,27 +12,79 @@ It logs system health and detects threshold breaches to simulate real-world infr
 - Continuous execution model
 - Alert generation
 - Historical logging
-- Threshold-based anomaly detection
+- Threshold-based stem metrics:
+
+- CPU usage
+- Memory consumption
+- Disk utilization
+
+It logs system health and detects threshold breaches to simulate real-world infra>
+
+## Features
+
+- Real-time system monitoring
+- Continuous execution model
+- Alert generation
+- H# Lightweight Infrastructure Monitoring Agent
+
+## Problem
+
+In large-scale environments, full observability stacks (e.g., Prometheus, Datadog) are not always deployable — particularly in:
+
+- restricted environments
+- edge infrastructure
+- isolated compute zones
+
+This project explores a minimal monitoring approach that can operate without orchestration or external dependencies.
+
+## Purpose
+
+Simulate how a lightweight monitoring agent can:
+
+- track system health
+- detect resource pressure
+- provide operational visibility
+
+without relying on centralized monitoring systems.
+
+## Design Goals
+
+- Low overhead execution
+- Continuous runtime
+- Dependency minimalism
+- Local decision-making
+
+## What It Simulates
+
+- CPU pressure detection
+- Memory utilization monitoring
+- Disk capacity awareness
+- Threshold-based alerting
+
+## Engineering Considerations
+
+This project models tradeoffs often faced in real environments:
+
+| Choice | Benefit | Tradeoff |
+|-------|--------|----------|
+| Local-only monitoring | Independence | No global visibility |
+| Minimal dependencies | Portability | Reduced analytics |
+| Threshold alerts | Simplicity | No anomaly prediction |
+
+## Limitations
+
+- No distributed aggregation
+- No predictive analysis
+- No external alert routing
 
 ## Why This Matters
 
-In global financial environments, infrastructure stability and uptime are critical.
+Infrastructure teams must sometimes operate in environments where traditional monitoring is unavailable.
 
-Monitoring agents like this form the foundation of:
+Lightweight agents provide:
 
-- platform reliability
-- operational resilience
-- incident detection
-- risk mitigation
+- fallback visibility
+- resilience in constrained systems
+- operational continuity
 
-This project simulates how infrastructure teams proactively observe system health to ensure uninterrupted service delivery.
-
-## Tech Stack
-
-- Python
-- psutil
-- Logging system
-
-## Example Output
-
-2026-02-25 16:44:26 | CPU: 20.6% | Memory: 67.8% | Disk: 87.4%
+This project demonstrates how monitoring capability can exist even in minimal setups.
