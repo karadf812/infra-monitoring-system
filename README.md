@@ -1,90 +1,51 @@
-stem metrics:
-
-- CPU usage
-- Memory consumption
-- Disk utilization
-
-It logs system health and detects threshold breaches to simulate real-world infrastructure alerting.
-
-## Features
-
-- Real-time system monitoring
-- Continuous execution model
-- Alert generation
-- Historical logging
-- Threshold-based stem metrics:
-
-- CPU usage
-- Memory consumption
-- Disk utilization
-
-It logs system health and detects threshold breaches to simulate real-world infra>
-
-## Features
-
-- Real-time system monitoring
-- Continuous execution model
-- Alert generation
-- H# Lightweight Infrastructure Monitoring Agent
+# Lightweight Infrastructure Monitoring Agent
 
 ## Problem
 
-In large-scale environments, full observability stacks (e.g., Prometheus, Datadog) are not always deployable — particularly in:
+Full monitoring platforms are not always deployable in restricted or resource-constrained environments.
 
-- restricted environments
-- edge infrastructure
-- isolated compute zones
-
-This project explores a minimal monitoring approach that can operate without orchestration or external dependencies.
+Teams may need minimal local visibility without relying on centralized tooling.
 
 ## Purpose
 
-Simulate how a lightweight monitoring agent can:
+This project simulates a lightweight monitoring agent capable of:
 
-- track system health
-- detect resource pressure
-- provide operational visibility
+- tracking system health
+- detecting resource pressure
+- providing operational awareness
 
-without relying on centralized monitoring systems.
+without external orchestration.
 
 ## Design Goals
 
 - Low overhead execution
 - Continuous runtime
-- Dependency minimalism
-- Local decision-making
+- Minimal dependencies
+- Local monitoring capability
 
 ## What It Simulates
 
-- CPU pressure detection
-- Memory utilization monitoring
+- CPU utilization monitoring
+- Memory consumption tracking
 - Disk capacity awareness
 - Threshold-based alerting
 
 ## Engineering Considerations
 
-This project models tradeoffs often faced in real environments:
-
 | Choice | Benefit | Tradeoff |
 |-------|--------|----------|
-| Local-only monitoring | Independence | No global visibility |
-| Minimal dependencies | Portability | Reduced analytics |
-| Threshold alerts | Simplicity | No anomaly prediction |
+| Local monitoring | Independence | No global view |
+| Simple thresholds | Reliability | No predictive logic |
+| Minimal footprint | Portability | Limited analytics |
 
 ## Limitations
 
-- No distributed aggregation
-- No predictive analysis
-- No external alert routing
+- No distributed visibility
+- No anomaly detection
+- No external alerting
 
 ## Why This Matters
 
-Infrastructure teams must sometimes operate in environments where traditional monitoring is unavailable.
+Infrastructure teams often need fallback monitoring when full observability stacks are unavailable.
 
-Lightweight agents provide:
-
-- fallback visibility
-- resilience in constrained systems
-- operational continuity
-
-This project demonstrates how monitoring capability can exist even in minimal setups.
+Lightweight agents can provide basic operational insight and continuity.
